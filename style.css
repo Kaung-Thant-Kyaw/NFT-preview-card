@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /* Primary */
+  --soft-blue: #8bacda;
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  background-color: var(--dark-blue-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--dark-blue-card);
+  max-width: 300px;
+  padding: 16px;
+  margin: 24px;
+  border-radius: 12px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.card-image .main-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.card-image .view-img,
+.card-image .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--cyan);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.card-image .view-img:hover,
+.card-image .overlay:hover {
+  opacity: 0.4;
+}
+
+.content h1 {
+  color: var(--white);
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.content h1:hover {
+  color: var(--cyan);
+}
+
+.content p {
+  color: #97b4de;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.eth-valid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.eth-valid-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eth-valid-section .nft-value {
+  color: var(--cyan);
+}
+
+.eth-valid-section img {
+  margin-right: 6px;
+}
+
+hr {
+  border: 1px solid var(--dark-blue-line);
+  margin-bottom: 12px;
+}
+
+.creator-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.creator-img {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.creator-img img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.description {
+  color: #97b4de;
+  font-size: 0.9rem;
+}
+
+.description .creator-name {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.creator-name:hover {
+  color: var(--cyan);
+}
